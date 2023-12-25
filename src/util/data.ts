@@ -458,6 +458,8 @@ const BIRD_IMAGES = [
     },
 ];
 
+export const ALL_IMAGES = [...BIRD_IMAGES];
+
 export const BIRD_DATA = BIRD_IMAGES.sort((a, b) => (a.tag < b.tag ? -1 : 1));
 
 // Group an array of objects by a key
@@ -503,4 +505,13 @@ export const UNIQUE_BIRDS = unique(
  */
 function unique(arr: any[]) {
     return arr.filter((v, i) => arr.indexOf(v) === i);
+}
+
+/**
+ * Get a random image from all images in repository
+ * @returns
+ */
+export function getRandomImage() {
+    const randomIndex = Math.floor(Math.random() * ALL_IMAGES.length);
+    return ALL_IMAGES[randomIndex];
 }

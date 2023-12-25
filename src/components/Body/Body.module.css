@@ -40,4 +40,5 @@
 
 .tabContent {
     margin-top: var(--mantine-spacing-md);
+    padding-bottom: var(--mantine-spacing-xl);
 }
