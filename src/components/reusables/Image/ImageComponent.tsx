@@ -37,18 +37,22 @@ const ImageComponent = ({
                 className={classes.image}
                 onClick={() => window.open(src.replace(".webp", ".jpg"))}
             />
-            <Flex className={classes.labelContainer} gap={4}>
+            <Flex className={classes.labelContainer} gap={4} fz="xs">
                 <Text
                     onClick={() => (tagOnClick ? tagOnClick(tag) : null)}
                     className={tagOnClick && classes.clickable}
+                    fz="xs"
                 >
                     {" "}
                     {tag}{" "}
                 </Text>
-                <Text c="dimmed">{TAG_NAME_SEPARATOR}</Text>
+                <Text c="dimmed" fz="xs">
+                    {TAG_NAME_SEPARATOR}
+                </Text>
                 <Text
                     onClick={() => (nameOnClick ? nameOnClick(name) : null)}
                     className={nameOnClick && classes.clickable}
+                    fz="xs"
                 >
                     {name}
                 </Text>

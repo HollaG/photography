@@ -1,3 +1,5 @@
+import { TAG_NAME_SEPARATOR } from "./consts";
+
 const BIRD_IMAGES = [
     {
         name: "Ashy Tailorbird",
@@ -458,8 +460,35 @@ const BIRD_IMAGES = [
 
 export const BIRD_DATA = BIRD_IMAGES.sort((a, b) => (a.tag < b.tag ? -1 : 1));
 
+// Group an array of objects by a key
+const GROUPED_BY_TAG = BIRD_DATA.reduce((acc, birdData) => {
+    const { tag } = birdData;
+
+    if (!acc[tag]) {
+        acc[tag] = [];
+    }
+
+    acc[tag].push(birdData);
+
+    return acc;
+}, {} as { [key: string]: typeof BIRD_DATA });
+
+// convert into the form needed by Autocomplete
+export const AUTOCOMPLETE_DATA_GROUPED = Object.keys(GROUPED_BY_TAG).map(
+    (tag) => {
+        return {
+            group: tag,
+            items: unique(
+                GROUPED_BY_TAG[tag].map((birdData) => `${birdData.name}`).sort()
+            ),
+        };
+    }
+);
+
 export const AUTOCOMPLETE_DATA = unique(
-    BIRD_IMAGES.map((birdData) => `${birdData.tag} / ${birdData.name}`).sort()
+    BIRD_IMAGES.map(
+        (birdData) => `${birdData.tag} ${TAG_NAME_SEPARATOR} ${birdData.name}`
+    ).sort()
 );
 
 export const UNIQUE_BIRDS = unique(

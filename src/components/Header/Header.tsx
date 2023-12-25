@@ -7,6 +7,8 @@ import {
     Autocomplete,
     Title,
     Button,
+    Flex,
+    Avatar,
 } from "@mantine/core";
 
 import classes from "./Header.module.css";
@@ -16,7 +18,7 @@ import {
     SearchContext,
     SearchDispatchContext,
 } from "../../context/SearchContext";
-import { AUTOCOMPLETE_DATA } from "../../util/data";
+import { AUTOCOMPLETE_DATA_GROUPED } from "../../util/data";
 
 const tabs = ["Home", "Birds", "Insects", "Others"];
 
@@ -37,7 +39,10 @@ export function Header() {
                 size={PAGE_CONTAINER_SIZE}
             >
                 <Group justify="space-between">
-                    <Title size={"h4"}> Marcus Soh </Title>
+                    <Flex align={"center"} gap={"sm"}>
+                        <Avatar src="self.jpg" alt="It's me!" size="md" />
+                        <Title size={"h4"}> Marcus Soh </Title>
+                    </Flex>
 
                     <Autocomplete
                         className={classes.search}
@@ -48,7 +53,7 @@ export function Header() {
                                 stroke={1.5}
                             />
                         }
-                        data={AUTOCOMPLETE_DATA}
+                        data={AUTOCOMPLETE_DATA_GROUPED}
                         visibleFrom="xs"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e)}
