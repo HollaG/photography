@@ -1,5 +1,3 @@
-import { TAG_NAME_SEPARATOR } from "./consts";
-
 export type ImageData = {
     name: string;
     tag: string;
@@ -786,7 +784,7 @@ export const UNIQUE_OTHERS = unique(
  * @param arr The array to process
  * @returns
  */
-function unique(arr: any[]) {
+function unique<T>(arr: T[]) {
     return arr.filter((v, i) => arr.indexOf(v) === i);
 }
 

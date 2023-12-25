@@ -1,6 +1,5 @@
 import classes from "./Insects.module.css";
-import { BIRD_DATA, INSECT_DATA, UNIQUE_INSECTS } from "../../../util/data";
-
+import { INSECT_DATA, UNIQUE_INSECTS } from "../../../util/data";
 import { Highlight, Text } from "@mantine/core";
 import Gallery from "../../reusables/Gallery/Gallery";
 

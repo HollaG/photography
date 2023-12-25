@@ -2,7 +2,6 @@ import { useContext } from "react";
 import {
     Container,
     Group,
-    Tabs,
     rem,
     Autocomplete,
     Title,
@@ -19,14 +18,6 @@ import {
     SearchDispatchContext,
 } from "../../context/SearchContext";
 import { AUTOCOMPLETE_DATA_GROUPED } from "../../util/data";
-
-const tabs = ["Home", "Birds", "Insects", "Others"];
-
-export const items = tabs.map((tab) => (
-    <Tabs.Tab value={tab.toLowerCase()} key={tab}>
-        {tab}
-    </Tabs.Tab>
-));
 
 export function Header() {
     const searchQuery = useContext(SearchContext);

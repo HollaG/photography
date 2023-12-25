@@ -2,16 +2,12 @@ import {
     Image,
     Container,
     Title,
-    Button,
-    Group,
     Text,
     List,
-    ThemeIcon,
-    rem,
     Anchor,
     Avatar,
 } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
+
 import classes from "./Home.module.css";
 import { getRandomImage } from "../../../util/data";
 

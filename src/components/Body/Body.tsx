@@ -1,12 +1,17 @@
 import { Container, Tabs } from "@mantine/core";
-import { items } from "../Header/Header";
 
 import classes from "./Body.module.css";
-import { PAGE_CONTAINER_SIZE } from "../../util/consts";
+import { PAGE_CONTAINER_SIZE, tabs } from "../../util/consts";
 import Home from "../Tabs/Home/Home";
 import Birds from "../Tabs/Birds/Birds";
 import Insects from "../Tabs/Insects/Insects";
 import Others from "../Tabs/Others/Others";
+
+const items = tabs.map((tab) => (
+    <Tabs.Tab value={tab.toLowerCase()} key={tab}>
+        {tab}
+    </Tabs.Tab>
+));
 
 const Body = () => {
     return (
