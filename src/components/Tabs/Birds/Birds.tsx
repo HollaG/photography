@@ -29,18 +29,20 @@ const Birds = () => {
     return (
         <div className={classes.tabContent}>
             <section id="photos" className={classes.photos}>
-                {/* {BIRDS_SORTED_BY_NAME.map((bird, index) => (
+                {filteredData.map((bird, index) => (
                     <div key={index} className={classes.image}>
                         <ImageComponent
                             description=""
-                            title={bird.name}
+                            name={bird.name}
                             src={`/Birds/${bird.name}/${bird.fileName}`}
                             tag={bird.tag}
+                            tagOnClick={(tag) => setSearchQuery(tag)}
+                            nameOnClick={(name) => setSearchQuery(name)}
                         />
                     </div>
-                ))} */}
+                ))}
             </section>
-            <SimpleGrid cols={{ base: 1, md: 2, lg: 3 }}>
+            {/* <SimpleGrid cols={{ base: 1, md: 2, lg: 3 }}>
                 {filteredData.map((bird, index) => (
                     <Center key={index}>
                         <ImageComponent
@@ -53,7 +55,7 @@ const Birds = () => {
                         />
                     </Center>
                 ))}
-            </SimpleGrid>
+            </SimpleGrid> */}
         </div>
     );
 };
