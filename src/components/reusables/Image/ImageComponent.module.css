@@ -15,3 +15,8 @@
 .image {
     /* border-radius: var(--mantine-spacing-xs); */
 }
+
+.clickable {
+    text-decoration: underline;
+    cursor: pointer;
+}

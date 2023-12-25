@@ -1,5 +1,5 @@
 import cx from "clsx";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
     Container,
     Avatar,
@@ -11,10 +11,19 @@ import {
     Burger,
     rem,
     useMantineTheme,
+    Autocomplete,
+    Title,
+    Button,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { PAGE_CONTAINER_SIZE } from "../../util/consts";
+import { IconArrowRight, IconSearch } from "@tabler/icons-react";
+import {
+    SearchContext,
+    SearchDispatchContext,
+} from "../../context/SearchContext";
+import { AUTOCOMPLETE_DATA } from "../../util/data";
 
 const user = {
     name: "Jane Spoonfighter",
@@ -35,6 +44,9 @@ export function Header() {
     const [opened, { toggle }] = useDisclosure(false);
     const [userMenuOpened, setUserMenuOpened] = useState(false);
 
+    const searchQuery = useContext(SearchContext);
+    const setSearchQuery = useContext(SearchDispatchContext);
+
     return (
         <div className={classes.header}>
             <Container
@@ -42,14 +54,32 @@ export function Header() {
                 size={PAGE_CONTAINER_SIZE}
             >
                 <Group justify="space-between">
-                    <Text> Marcus Soh </Text>
+                    <Title size={"h4"}> Marcus Soh </Title>
 
-                    <Burger
-                        opened={opened}
-                        onClick={toggle}
-                        hiddenFrom="xs"
-                        size="sm"
+                    <Autocomplete
+                        className={classes.search}
+                        placeholder="Search"
+                        leftSection={
+                            <IconSearch
+                                style={{ width: rem(16), height: rem(16) }}
+                                stroke={1.5}
+                            />
+                        }
+                        data={AUTOCOMPLETE_DATA}
+                        visibleFrom="xs"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e)}
                     />
+
+                    <Button
+                        variant="light"
+                        rightSection={<IconArrowRight size={14} />}
+                        component="a"
+                        href="https://marcussoh.com"
+                        target="_blank"
+                    >
+                        My Web Dev portfolio
+                    </Button>
                 </Group>
             </Container>
             {/* <Container size="xl">
