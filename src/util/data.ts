@@ -1,4 +1,12 @@
-const BIRD_IMAGES = [
+export type ImageData = {
+    name: string;
+    tag: string;
+    fileName: string;
+    description: string;
+    location: string;
+};
+
+const BIRD_IMAGES: ImageData[] = [
     {
         name: "Ashy Tailorbird",
         tag: "Tailorbirds",
@@ -315,9 +323,23 @@ const BIRD_IMAGES = [
         location: "",
     },
     {
+        name: "Red Junglefowl",
+        tag: "Chickens",
+        fileName: "IMG_0340.webp",
+        description: "",
+        location: "",
+    },
+    {
         name: "Red-Breasted Parakeet",
         tag: "Parakeets",
         fileName: "R6__1918.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Red-Breasted Parakeet",
+        tag: "Parakeets",
+        fileName: "R6__0284.webp",
         description: "",
         location: "",
     },
@@ -456,11 +478,305 @@ const BIRD_IMAGES = [
     },
 ];
 
+const INSECT_IMAGES: ImageData[] = [
+    {
+        name: "Batik Golden Web Spider",
+        tag: "Spiders",
+        fileName: "R6__3894-Enhanced-NR.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Collared Threadtail",
+        tag: "Damselflies",
+        fileName: "R6__5513.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Common Birdwing",
+        tag: "Butterflies",
+        fileName: "R6__9134.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Common Palmfly",
+        tag: "Butterflies",
+        fileName: "R6__3556.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Common Parasol",
+        tag: "Dragonflies",
+        fileName: "R6__5699.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Common Parasol",
+        tag: "Dragonflies",
+        fileName: "R6__8879.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Dark-Tipped Forest-Skimmer",
+        tag: "Dragonflies",
+        fileName: "R6__5724.webp",
+        description: "R6__7567.webp",
+        location: "",
+    },
+    {
+        name: "Hübner's Wasp Moth",
+        tag: "Moths",
+        fileName: "R6__7567.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Limnometra Ciliata",
+        tag: "Water Striders",
+        fileName: "R6__0991.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Malayan Plum Judy",
+        tag: "Butterflies",
+        fileName: "R6__3482.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Nisitrus Malaya",
+        tag: "Grasshoppers",
+        fileName: "R6__3475.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Painted Jezebel",
+        tag: "Butterflies",
+        fileName: "R6__5458.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Palm King",
+        tag: "Butterflies",
+        fileName: "R6__9007.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Rufous-Legged Grasshopper",
+        tag: "Grasshoppers",
+        fileName: "R6__0300.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Scarlet Skimmer",
+        tag: "Dragonflies",
+        fileName: "R6__0322.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Short-Banded Sailor",
+        tag: "Butterflies",
+        fileName: "R6__8810.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Treehugger",
+        tag: "Dragonflies",
+        fileName: "R6__5494-Enhanced-NR.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Variable Sentinel",
+        tag: "Dragonflies",
+        fileName: "R6__5567.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Variegated Green Skimmer",
+        tag: "Dragonflies",
+        fileName: "R6__4033.webp",
+        description: "",
+        location: "",
+    },
+    {
+        name: "Yellow-Barred Flutterer",
+        tag: "Dragonflies",
+        fileName: "R6__8834.webp",
+        description: "",
+        location: "",
+    },
+];
+
+const OTHERS_IMAGES: ImageData[] = [
+    {
+        name: "Boddart's Blue-Spotted Mudskipper",
+        tag: "Mudskippers",
+        fileName: "R6__3941.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Common Sun Skink",
+        tag: "Skinks",
+        fileName: "R6__8722.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Estuarine Crocodile",
+        tag: "Crocodiles",
+        fileName: "R6__9137.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Estuarine Crocodile",
+        tag: "Crocodiles",
+        fileName: "R6__0467.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Giant Mudskipper",
+        tag: "Mudskippers",
+        fileName: "R6__8817.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Lesser Short-Nosed Fruit Bat",
+        tag: "Bats",
+        fileName: "lesser dog-faced fruit bat.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Mangrove Jellyfish",
+        tag: "Jellyfishes",
+        fileName: "R6__9971.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Mangrove Viper",
+        tag: "Snakes",
+        fileName: "R6__9107.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Oriental Garden Lizard",
+        tag: "Lizards",
+        fileName: "IMG_0098.webp",
+        description: "",
+        location: "Pasir Ris Park",
+    },
+    {
+        name: "Oriental Garden Lizard",
+        tag: "Lizards",
+        fileName: "R6__7695.webp",
+        description: "",
+        location: "Jurong Lake Gardens",
+    },
+    {
+        name: "Paradise Flying Snake",
+        tag: "Snakes",
+        fileName: "R6__8930.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Plaintain Squirrel",
+        tag: "Squirrels",
+        fileName: "R6__8358.webp",
+        description: "",
+        location: "Pasir Ris Park",
+    },
+    {
+        name: "Red-Eared Slider",
+        tag: "Turtles",
+        fileName: "IMG_9435.webp",
+        description: "",
+        location: "Tampines Eco Green",
+    },
+    {
+        name: "Smooth-Coated Otter",
+        tag: "Otters",
+        fileName: "R6__9154.webp",
+        description: "",
+        location: "Sungei Buloh Wetland Reserve",
+    },
+    {
+        name: "Southeast Asian Water Monitor",
+        tag: "Monitor Lizards",
+        fileName: "R6__5795.webp",
+        description: "",
+        location: "National University of Singapore",
+    },
+];
+
+export const ALL_IMAGES = [...BIRD_IMAGES, ...INSECT_IMAGES, ...OTHERS_IMAGES];
+
 export const BIRD_DATA = BIRD_IMAGES.sort((a, b) => (a.tag < b.tag ? -1 : 1));
 
-export const AUTOCOMPLETE_DATA = unique(
-    BIRD_IMAGES.map((birdData) => `${birdData.tag} / ${birdData.name}`).sort()
+export const INSECT_DATA = INSECT_IMAGES.sort((a, b) =>
+    a.tag < b.tag ? -1 : 1
 );
+
+export const OTHERS_DATA = OTHERS_IMAGES.sort((a, b) =>
+    a.tag < b.tag ? -1 : 1
+);
+
+// Group an array of objects by a key
+const GROUPED_BY_TAG = ALL_IMAGES.reduce((acc, item) => {
+    const { tag } = item;
+
+    if (!acc[tag]) {
+        acc[tag] = [];
+    }
+
+    acc[tag].push(item);
+
+    return acc;
+}, {} as { [key: string]: typeof BIRD_DATA });
+
+// convert into the form needed by Autocomplete
+export const AUTOCOMPLETE_DATA_GROUPED = Object.keys(GROUPED_BY_TAG)
+    .map((tag) => {
+        return {
+            group: tag,
+            items: unique(
+                GROUPED_BY_TAG[tag].map((item) => `${item.name}`).sort()
+            ),
+        };
+    })
+    .sort((a, b) => (a.group < b.group ? -1 : 1));
+
+export const UNIQUE_BIRDS = unique(
+    BIRD_IMAGES.map((birdData) => birdData.name)
+).length;
+
+export const UNIQUE_INSECTS = unique(
+    INSECT_IMAGES.map((insectData) => insectData.name)
+).length;
+
+export const UNIQUE_OTHERS = unique(
+    OTHERS_IMAGES.map((otherData) => otherData.name)
+).length;
 
 /**
  * Removes duplicates.
@@ -468,6 +784,15 @@ export const AUTOCOMPLETE_DATA = unique(
  * @param arr The array to process
  * @returns
  */
-function unique(arr: any[]) {
+function unique<T>(arr: T[]) {
     return arr.filter((v, i) => arr.indexOf(v) === i);
+}
+
+/**
+ * Get a random image from all images in repository
+ * @returns
+ */
+export function getRandomImage() {
+    const randomIndex = Math.floor(Math.random() * ALL_IMAGES.length);
+    return ALL_IMAGES[randomIndex];
 }

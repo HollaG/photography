@@ -1,7 +1,9 @@
 import { createContext, useState } from "react";
 
 const SearchContext = createContext("");
-const SearchDispatchContext = createContext<any>(undefined);
+const SearchDispatchContext = createContext<
+    React.Dispatch<React.SetStateAction<string>>
+>(() => {});
 
 function SearchProvider({
     children,

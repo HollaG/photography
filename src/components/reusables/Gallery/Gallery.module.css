@@ -1,0 +1,29 @@
+.photos {
+    /* Prevent vertical gaps */
+    line-height: 0;
+
+    -webkit-column-count: 3;
+    -webkit-column-gap: 8px;
+    -moz-column-count: 3;
+    -moz-column-gap: 8px;
+    column-count: 3;
+    column-gap: 8px;
+
+    @media (max-width: $mantine-breakpoint-lg) {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    @media (max-width: $mantine-breakpoint-md) {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+.image {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+
+    margin-bottom: 8px;
+}
