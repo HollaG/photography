@@ -1,11 +1,11 @@
-import classes from "./Birds.module.css";
-import { BIRD_DATA, UNIQUE_BIRDS } from "../../../util/data";
+import classes from "./Insects.module.css";
+import { BIRD_DATA, INSECT_DATA, UNIQUE_INSECTS } from "../../../util/data";
 
 import { Highlight, Text } from "@mantine/core";
 import Gallery from "../../reusables/Gallery/Gallery";
 
-const Birds = () => {
-    const str = `Currently tracking ${UNIQUE_BIRDS.toString()} different birds`;
+const Insects = () => {
+    const str = `Currently tracking ${UNIQUE_INSECTS.toString()} different insects`;
 
     return (
         <div className={classes.tabContent}>
@@ -14,15 +14,15 @@ const Birds = () => {
                 Click on an image to view it full-size!
             </Text>
             <Highlight
-                highlight={UNIQUE_BIRDS.toString()}
+                highlight={UNIQUE_INSECTS.toString()}
                 ta="center"
                 mb={"md"}
             >
                 {str}
             </Highlight>
-            <Gallery folderName="Birds" images={BIRD_DATA} />
+            <Gallery folderName="Insects" images={INSECT_DATA} />
         </div>
     );
 };
 
-export default Birds;
+export default Insects;

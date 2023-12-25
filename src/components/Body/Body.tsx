@@ -5,6 +5,8 @@ import classes from "./Body.module.css";
 import { PAGE_CONTAINER_SIZE } from "../../util/consts";
 import Home from "../Tabs/Home/Home";
 import Birds from "../Tabs/Birds/Birds";
+import Insects from "../Tabs/Insects/Insects";
+import Others from "../Tabs/Others/Others";
 
 const Body = () => {
     return (
@@ -32,8 +34,14 @@ const Body = () => {
                     {" "}
                     <Birds />{" "}
                 </Tabs.Panel>
-                <Tabs.Panel value="insects"> insects page </Tabs.Panel>
-                <Tabs.Panel value="others"> others page </Tabs.Panel>
+                <Tabs.Panel value="insects">
+                    {" "}
+                    <Insects />{" "}
+                </Tabs.Panel>
+                <Tabs.Panel value="others">
+                    {" "}
+                    <Others />
+                </Tabs.Panel>
             </div>
         </Tabs>
     );
