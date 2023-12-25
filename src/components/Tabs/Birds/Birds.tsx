@@ -7,7 +7,7 @@ import {
     SearchDispatchContext,
 } from "../../../context/SearchContext";
 import { TAG_NAME_SEPARATOR } from "../../../util/consts";
-import { Text } from "@mantine/core";
+import { Highlight, Text } from "@mantine/core";
 
 const Birds = () => {
     const searchQuery = useContext(SearchContext);
@@ -25,13 +25,21 @@ const Birds = () => {
             .includes(searchQuery.toLowerCase());
     });
 
+    const str = `Currently tracking ${UNIQUE_BIRDS.toString()} different birds`;
+
     return (
         <div className={classes.tabContent}>
-            <Text ta="center"> Click on an image to view it full-size!</Text>
-            <Text ta="center">
+            <Text ta="center" fw={500}>
                 {" "}
-                Currently tracking {UNIQUE_BIRDS} different birds
+                Click on an image to view it full-size!
             </Text>
+            <Highlight
+                highlight={UNIQUE_BIRDS.toString()}
+                ta="center"
+                mb={"md"}
+            >
+                {str}
+            </Highlight>
             <section id="photos" className={classes.photos}>
                 {filteredData.map((bird, index) => (
                     <div key={index} className={classes.image}>
