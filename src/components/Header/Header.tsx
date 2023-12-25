@@ -9,13 +9,12 @@ import {
     Flex,
     Avatar,
     CloseButton,
-    ActionIcon,
     Box,
 } from "@mantine/core";
 
 import classes from "./Header.module.css";
 import { PAGE_CONTAINER_SIZE } from "../../util/consts";
-import { IconArrowRight, IconCode, IconSearch } from "@tabler/icons-react";
+import { IconArrowRight, IconSearch } from "@tabler/icons-react";
 import {
     SearchContext,
     SearchDispatchContext,
@@ -44,10 +43,8 @@ export function Header() {
             // visibleFrom="sm"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e)}
-            onClick={(e) => {
+            onClick={() => {
                 open();
-                // e.preventDefault();
-                // e.stopPropagation();
             }}
             readOnly
             rightSection={

@@ -25,7 +25,7 @@ export default function Home() {
     // get a random image lmao
     let img = getRandomImage();
 
-    const [c, setC] = useState(true);
+    const [_, setC] = useState(true);
     return (
         <Container size="md">
             <div className={classes.inner}>

@@ -5,10 +5,9 @@ import {
     Modal,
     Text,
     TextInput,
-    Title,
     rem,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+
 import {
     IconButterfly,
     IconDog,
@@ -20,13 +19,8 @@ import {
     SearchContext,
     SearchDispatchContext,
 } from "../../context/SearchContext";
-import {
-    BIRDS_GROUPED_BY_TAG,
-    GROUPED_BY_TAG,
-    ImageData,
-} from "../../util/data";
+import { GROUPED_BY_TAG, ImageData } from "../../util/data";
 
-import { GiEgyptianBird } from "react-icons/gi";
 import { TabDispatchContext } from "../../context/TabContext";
 
 type ModalProps = {
