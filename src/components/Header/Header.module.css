@@ -36,5 +36,14 @@
 
 .search {
     flex-grow: 1;
-    max-width: 32rem;
+    max-width: var(--mantine-breakpoint-sm);
+    min-width: 10rem;
+    /* position: fixed;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    z-index: 199; */
+}
+
+.searchContainerBig {
+    flex-grow: 1;
 }

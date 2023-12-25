@@ -6,18 +6,38 @@ import {
     List,
     Anchor,
     Avatar,
+    Center,
+    Flex,
+    Button,
 } from "@mantine/core";
 
 import classes from "./Home.module.css";
 import { getRandomImage } from "../../../util/data";
+import { IconRefresh } from "@tabler/icons-react";
+import { useContext, useState } from "react";
+import ImageComponent from "../../reusables/Image/ImageComponent";
+import { TabDispatchContext } from "../../../context/TabContext";
+import { SearchDispatchContext } from "../../../context/SearchContext";
 
 export default function Home() {
+    const setActiveTab = useContext(TabDispatchContext);
+    const setSearchQuery = useContext(SearchDispatchContext);
     // get a random image lmao
-    const img = getRandomImage();
+    let img = getRandomImage();
+
+    const [c, setC] = useState(true);
     return (
         <Container size="md">
             <div className={classes.inner}>
                 <div className={classes.content}>
+                    <Center>
+                        <Image
+                            src={"self.jpg"}
+                            className={classes.image}
+                            hiddenFrom="md"
+                        />
+                    </Center>
+
                     <Title className={classes.title}>
                         Hi, I'm{" "}
                         <span className={classes.highlight}>Marcus.</span>{" "}
@@ -126,14 +146,40 @@ export default function Home() {
                         </Button>
                     </Group> */}
                 </div>
-                <Image src={"self.jpg"} className={classes.image} />
+                <Image
+                    src={"self.jpg"}
+                    className={classes.image}
+                    visibleFrom="md"
+                />
             </div>
             <div>
-                <Title size={"h3"} ta="center">
-                    {" "}
-                    A random picture from my collection{" "}
-                </Title>
-                <Image mt={30} src={`/Birds/${img.name}/${img.fileName}`} />
+                <Flex justify={"center"} align={"center"} gap={12} mb={30}>
+                    <Title size={"h3"} ta="center">
+                        {" "}
+                        A random picture from my collection{" "}
+                    </Title>
+                    <Button
+                        leftSection={<IconRefresh />}
+                        size="sm"
+                        variant="light"
+                        onClick={() => setC((prev) => !prev)}
+                    >
+                        New image
+                    </Button>
+                </Flex>
+
+                <ImageComponent
+                    {...img}
+                    src={`/${img.type}/${img.name}/${img.fileName}`}
+                    nameOnClick={(_) => {
+                        setActiveTab(img.type);
+                        setSearchQuery(img.name);
+                    }}
+                    tagOnClick={(_) => {
+                        setActiveTab(img.type);
+                        setSearchQuery(img.tag);
+                    }}
+                />
             </div>
         </Container>
     );

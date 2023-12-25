@@ -1,11 +1,11 @@
 import classes from "./Others.module.css";
-import { OTHERS_DATA, UNIQUE_OTHERS } from "../../../util/data";
+import { OTHERS_DATA, UNIQUE_OTHERS_COUNT } from "../../../util/data";
 
 import { Highlight, Text } from "@mantine/core";
 import Gallery from "../../reusables/Gallery/Gallery";
 
 const Others = () => {
-    const str = `Currently tracking ${UNIQUE_OTHERS.toString()} different other wildlife`;
+    const str = `Currently tracking ${UNIQUE_OTHERS_COUNT.toString()} different other wildlife`;
 
     return (
         <div className={classes.tabContent}>
@@ -14,7 +14,7 @@ const Others = () => {
                 Click on an image to view it full-size!
             </Text>
             <Highlight
-                highlight={UNIQUE_OTHERS.toString()}
+                highlight={UNIQUE_OTHERS_COUNT.toString()}
                 ta="center"
                 mb={"md"}
             >
