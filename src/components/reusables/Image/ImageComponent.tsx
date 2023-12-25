@@ -26,7 +26,7 @@ const ImageComponent = ({
     src,
     name,
     tag,
-    description,
+    // description,
     tagOnClick,
     nameOnClick,
 }: ImageProps) => {

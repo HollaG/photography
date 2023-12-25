@@ -1,5 +1,3 @@
-import { Center, Image, SimpleGrid } from "@mantine/core";
-
 import classes from "./Birds.module.css";
 import ImageComponent from "../../reusables/Image/ImageComponent";
 import { BIRD_DATA } from "../../../util/data";
@@ -14,7 +12,7 @@ const Birds = () => {
     const searchQuery = useContext(SearchContext);
     const setSearchQuery = useContext(SearchDispatchContext);
 
-    const splitSearch = searchQuery.split(" ");
+    // const splitSearch = searchQuery.split(" ");
     const filteredData = BIRD_DATA.filter((bird) => {
         // return splitSearch.some(
         //     (v) =>
