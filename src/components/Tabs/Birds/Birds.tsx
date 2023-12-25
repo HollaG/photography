@@ -1,12 +1,13 @@
 import classes from "./Birds.module.css";
 import ImageComponent from "../../reusables/Image/ImageComponent";
-import { BIRD_DATA } from "../../../util/data";
+import { BIRD_DATA, UNIQUE_BIRDS } from "../../../util/data";
 import { useContext } from "react";
 import {
     SearchContext,
     SearchDispatchContext,
 } from "../../../context/SearchContext";
 import { TAG_NAME_SEPARATOR } from "../../../util/consts";
+import { Text } from "@mantine/core";
 
 const Birds = () => {
     const searchQuery = useContext(SearchContext);
@@ -26,6 +27,11 @@ const Birds = () => {
 
     return (
         <div className={classes.tabContent}>
+            <Text ta="center"> Click on an image to view it full-size!</Text>
+            <Text ta="center">
+                {" "}
+                Currently tracking {UNIQUE_BIRDS} different birds
+            </Text>
             <section id="photos" className={classes.photos}>
                 {filteredData.map((bird, index) => (
                     <div key={index} className={classes.image}>

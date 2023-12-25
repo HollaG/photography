@@ -462,6 +462,10 @@ export const AUTOCOMPLETE_DATA = unique(
     BIRD_IMAGES.map((birdData) => `${birdData.tag} / ${birdData.name}`).sort()
 );
 
+export const UNIQUE_BIRDS = unique(
+    BIRD_IMAGES.map((birdData) => birdData.name)
+).length;
+
 /**
  * Removes duplicates.
  *

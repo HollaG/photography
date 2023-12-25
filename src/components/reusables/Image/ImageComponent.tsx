@@ -32,7 +32,11 @@ const ImageComponent = ({
 }: ImageProps) => {
     return (
         <div className={classes.container}>
-            <Image src={src} className={classes.image} />
+            <Image
+                src={src}
+                className={classes.image}
+                onClick={() => window.open(src.replace(".webp", ".jpg"))}
+            />
             <Flex className={classes.labelContainer} gap={4}>
                 <Text
                     onClick={() => (tagOnClick ? tagOnClick(tag) : null)}
