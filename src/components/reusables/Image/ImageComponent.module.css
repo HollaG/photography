@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+}
+
+.labelContainer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    bottom: 1rem;
+    right: 1rem;
+    padding: var(--mantine-spacing-xs);
+    border-radius: var(--mantine-spacing-xs);
+}
+
+.image {
+    /* border-radius: var(--mantine-spacing-xs); */
+}

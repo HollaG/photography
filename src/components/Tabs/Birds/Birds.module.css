@@ -1,0 +1,11 @@
+.image {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+.tabContent {
+    padding: var(--mantine-spacing-lg);
+    max-width: 128rem;
+    margin: auto;
+}
