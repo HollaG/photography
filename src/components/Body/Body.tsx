@@ -1,7 +1,7 @@
-import { Container, ScrollArea, Tabs, rem } from "@mantine/core";
+import { ScrollArea, Tabs, rem } from "@mantine/core";
 
 import classes from "./Body.module.css";
-import { PAGE_CONTAINER_SIZE, tabs } from "../../util/consts";
+import { tabs } from "../../util/consts";
 import Home from "../Tabs/Home/Home";
 import Birds from "../Tabs/Birds/Birds";
 import Insects from "../Tabs/Insects/Insects";
