@@ -14,7 +14,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Tailorbirds",
         fileName: "R6__4248.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -22,7 +22,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Starlings",
         fileName: "IMG_9352.webp",
         description: "",
-        location: "",
+        location: "Tampines Eco Green",
     },
     {
         type: "Birds",
@@ -30,7 +30,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Starlings",
         fileName: "R6__9517.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -38,7 +38,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Swans",
         fileName: "R6__9038.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -46,7 +46,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Orioles",
         fileName: "IMG_1438.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -54,7 +54,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Orioles",
         fileName: "R6__4132.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -62,7 +62,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kites",
         fileName: "R6__2927.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -70,7 +70,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Owls",
         fileName: "bfo.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -78,7 +78,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__4074.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -86,7 +86,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__4914.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -94,7 +94,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__9913.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -102,7 +102,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Woodpeckers",
         fileName: "R6__7680.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -110,7 +110,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Ioras",
         fileName: "IMG_1416 2.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -118,7 +118,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__9129.webp",
         description: "",
-        location: "",
+        location: "Singapore Botanic Gardens",
     },
     {
         type: "Birds",
@@ -126,7 +126,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Redshanks",
         fileName: "R6__8992.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -134,7 +134,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sandpipers",
         fileName: "R6__4257.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -142,7 +142,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Terns",
         fileName: "IMG_1545.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir View",
     },
     {
         type: "Birds",
@@ -150,7 +150,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sunbirds",
         fileName: "R6__1222.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -158,7 +158,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sunbirds",
         fileName: "R6__9071.webp",
         description: "",
-        location: "",
+        location: "Singapore Botanic Gardens",
     },
     {
         type: "Birds",
@@ -166,7 +166,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sparrows",
         fileName: "IMG_1794.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -174,7 +174,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Herons",
         fileName: "R6__0850.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -182,7 +182,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Herons",
         fileName: "R6__9754.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -190,7 +190,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Egrets",
         fileName: "R6__8984.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -198,7 +198,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Herons",
         fileName: "R6__9037.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -206,7 +206,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Drongos",
         fileName: "R6__9064.webp",
         description: "",
-        location: "",
+        location: "Singapore Botanic Gardens",
     },
     {
         type: "Birds",
@@ -214,7 +214,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Crows",
         fileName: "R6__4652.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -222,7 +222,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Mynahs",
         fileName: "IMG_1393.webp",
         description: "",
-        location: "",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -230,7 +230,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Barbets",
         fileName: "R6__9080.webp",
         description: "",
-        location: "",
+        location: "Singapore Botanic Gardens",
     },
     {
         type: "Birds",
@@ -238,7 +238,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Egrets",
         fileName: "R6__0596.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -246,7 +246,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Egrets",
         fileName: "R6__3969.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -254,7 +254,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Egrets",
         fileName: "R6__4155.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -262,7 +262,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Storks",
         fileName: "R6__4002.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -270,7 +270,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sunbirds",
         fileName: "IMG_9342.webp",
         description: "",
-        location: "",
+        location: "Tampines Eco Green",
     },
     {
         type: "Birds",
@@ -278,7 +278,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sunbirds",
         fileName: "IMG_9964.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -286,7 +286,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Sunbirds",
         fileName: "R6__7365.webp",
         description: "",
-        location: "",
+        location: "Jurong Lake Gardens",
     },
     {
         type: "Birds",
@@ -294,7 +294,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Rollers",
         fileName: "R6__5366.webp",
         description: "",
-        location: "",
+        location: "National University of Singapore",
     },
     {
         type: "Birds",
@@ -302,7 +302,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Buzzards",
         fileName: "R6__3585.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -310,7 +310,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Robins",
         fileName: "R6__9175.webp",
         description: "",
-        location: "",
+        location: "Singapore Botanic Gardens",
     },
     {
         type: "Birds",
@@ -318,7 +318,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Hornbills",
         fileName: "R6__2707.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -326,7 +326,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Hornbills",
         fileName: "R6__7628.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -334,7 +334,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Swallows",
         fileName: "R6__8027.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -342,7 +342,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Cuckooshrikes",
         fileName: "R6__4171.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -350,7 +350,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Pigeons",
         fileName: "R6__0901.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -358,7 +358,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Pigeons",
         fileName: "R6__4306.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -366,7 +366,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Chickens",
         fileName: "R6__2542.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -374,7 +374,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Chickens",
         fileName: "IMG_0340.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -382,7 +382,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Parakeets",
         fileName: "R6__1918.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -390,7 +390,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Parakeets",
         fileName: "R6__0284.webp",
         description: "",
-        location: "",
+        location: "Tampines Eco Green",
     },
     {
         type: "Birds",
@@ -398,7 +398,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Flowerpeckers",
         fileName: "R6__8773.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -406,7 +406,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Doves",
         fileName: "R6__4172.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -414,7 +414,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Doves",
         fileName: "R6__7417.webp",
         description: "",
-        location: "",
+        location: "Jurong Lake Gardens",
     },
     {
         type: "Birds",
@@ -422,7 +422,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Owls",
         fileName: "R6__2165.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -430,7 +430,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Owls",
         fileName: "R6__8229.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -438,7 +438,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__9863.webp",
         description: "",
-        location: "",
+        location: "Pair Ris Park",
     },
     {
         type: "Birds",
@@ -446,7 +446,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Herons",
         fileName: "R6__4236.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -454,7 +454,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Whimbrels",
         fileName: "R6__8974.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -462,7 +462,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Eagles",
         fileName: "R6__0399.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -470,7 +470,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Eagles",
         fileName: "R6__3032.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -478,7 +478,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Eagles",
         fileName: "R6__2878.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -486,7 +486,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Waterbirds",
         fileName: "IMG_0321.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -494,7 +494,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Waterbirds",
         fileName: "R6__8958.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -502,7 +502,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Laughingthrushes",
         fileName: "R6__3602.webp",
         description: "",
-        location: "",
+        location: "National University of Singapore",
     },
     {
         type: "Birds",
@@ -510,7 +510,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__8643.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -518,7 +518,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Bitterns",
         fileName: "R6__8655.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Birds",
@@ -526,7 +526,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Bulbuls",
         fileName: "R6__7486.webp",
         description: "",
-        location: "",
+        location: "Jurong Lake Gardens",
     },
     {
         type: "Birds",
@@ -534,7 +534,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Bulbuls",
         fileName: "R6__8121.webp",
         description: "",
-        location: "",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -542,7 +542,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Doves",
         fileName: "R6__4325.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
 ];
 
@@ -553,7 +553,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Spiders",
         fileName: "R6__3894-Enhanced-NR.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -561,7 +561,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Damselflies",
         fileName: "R6__5513.webp",
         description: "",
-        location: "",
+        location: "Thomson Nature Park",
     },
     {
         type: "Insects",
@@ -569,7 +569,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Butterflies",
         fileName: "R6__9134.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -577,7 +577,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Butterflies",
         fileName: "R6__3556.webp",
         description: "",
-        location: "",
+        location: "National University of Singapore",
     },
     {
         type: "Insects",
@@ -585,7 +585,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__5699.webp",
         description: "",
-        location: "",
+        location: "Thomson Nature Park",
     },
     {
         type: "Insects",
@@ -593,7 +593,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__8879.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -601,7 +601,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__5724.webp",
         description: "R6__7567.webp",
-        location: "",
+        location: "Thomson Nature Park",
     },
     {
         type: "Insects",
@@ -609,7 +609,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Moths",
         fileName: "R6__7567.webp",
         description: "",
-        location: "",
+        location: "Jurong Lake Gardens",
     },
     {
         type: "Insects",
@@ -617,7 +617,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Water Striders",
         fileName: "R6__0991.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -625,7 +625,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Butterflies",
         fileName: "R6__3482.webp",
         description: "",
-        location: "",
+        location: "National University of Singapore",
     },
     {
         type: "Insects",
@@ -633,7 +633,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Grasshoppers",
         fileName: "R6__3475.webp",
         description: "",
-        location: "",
+        location: "National University of Singapore",
     },
     {
         type: "Insects",
@@ -641,7 +641,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Butterflies",
         fileName: "R6__5458.webp",
         description: "",
-        location: "",
+        location: "Thomson Nature Park",
     },
     {
         type: "Insects",
@@ -649,7 +649,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Butterflies",
         fileName: "R6__9007.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -657,7 +657,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Grasshoppers",
         fileName: "R6__0300.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -665,7 +665,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__0322.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -673,7 +673,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Butterflies",
         fileName: "R6__8810.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -681,7 +681,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__5494-Enhanced-NR.webp",
         description: "",
-        location: "",
+        location: "Thomson Nature Park",
     },
     {
         type: "Insects",
@@ -689,7 +689,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__5567.webp",
         description: "",
-        location: "",
+        location: "Thomson Nature Park",
     },
     {
         type: "Insects",
@@ -697,7 +697,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__4033.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
     {
         type: "Insects",
@@ -705,7 +705,7 @@ const INSECT_IMAGES: ImageData[] = [
         tag: "Dragonflies",
         fileName: "R6__8834.webp",
         description: "",
-        location: "",
+        location: "Sungei Buloh Wetland Reserve",
     },
 ];
 
