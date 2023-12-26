@@ -10,10 +10,12 @@ import { useContext } from "react";
 import { TabContext, TabDispatchContext } from "../../context/TabContext";
 import {
     IconButterfly,
+    IconCamera,
     IconDog,
     IconFeather,
     IconHome,
 } from "@tabler/icons-react";
+import General from "../Tabs/General/General";
 
 const iconStyle = { width: rem(12), height: rem(12) };
 
@@ -22,6 +24,7 @@ const iconMap: { [key: string]: JSX.Element } = {
     Birds: <IconFeather style={iconStyle} />,
     Insects: <IconButterfly style={iconStyle} />,
     Others: <IconDog style={iconStyle} />,
+    General: <IconCamera style={iconStyle} />,
 };
 
 const items = tabs.map((tab) => (
@@ -70,6 +73,9 @@ const Body = () => {
                 <Tabs.Panel value="Others">
                     {" "}
                     <Others />
+                </Tabs.Panel>
+                <Tabs.Panel value="General">
+                    <General />
                 </Tabs.Panel>
             </div>
         </Tabs>

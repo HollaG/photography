@@ -4,7 +4,7 @@ export type ImageData = {
     fileName: string;
     description: string;
     location: string;
-    type: "Birds" | "Insects" | "Others";
+    type: "Birds" | "Insects" | "Others" | "General";
 };
 
 const BIRD_IMAGES: ImageData[] = [
@@ -832,6 +832,89 @@ const OTHERS_IMAGES: ImageData[] = [
     },
 ];
 
+const GENERAL_IMAGES: ImageData[] = [
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "1.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "2.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "3.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "4.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "5.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "6.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "7.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "8.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "9.webp",
+        description: "",
+        location: "",
+    },
+    {
+        type: "General",
+        name: "",
+        tag: "",
+        fileName: "10.webp",
+        description: "",
+        location: "",
+    },
+];
+
 export const ALL_IMAGES = [...BIRD_IMAGES, ...INSECT_IMAGES, ...OTHERS_IMAGES];
 
 export const BIRD_DATA = BIRD_IMAGES.sort((a, b) => (a.tag < b.tag ? -1 : 1));
@@ -844,7 +927,10 @@ export const OTHERS_DATA = OTHERS_IMAGES.sort((a, b) =>
     a.tag < b.tag ? -1 : 1
 );
 
-// Group an array of objects by a key
+// randomize the array
+export const GENERAL_DATA = GENERAL_IMAGES.sort(() => Math.random() - 0.5);
+
+// Group an array of objects by a key, except for General Images
 export const GROUPED_BY_TAG = uniquify(ALL_IMAGES, "name").reduce(
     (acc, item) => {
         const { tag } = item;
@@ -926,4 +1012,23 @@ function uniquify<T>(arr: T[], property: keyof T) {
 export function getRandomImage() {
     const randomIndex = Math.floor(Math.random() * ALL_IMAGES.length);
     return ALL_IMAGES[randomIndex];
+}
+
+/**
+ * Generates an image path based on what type of image is supplied.
+ * For images other than GENERAL, the path is:
+ * / [ type of image, e.g. Birds ] / [ species, e.g. Ashy Tailorbird ] / [ fileName, e.g. R6_1000.jpg ]
+ *
+ * For GENERAL images, the path is:
+ * / [ General ] / [ fileName ]
+ *
+ * @param data The image to get the path for
+ * @returns
+ */
+export function getImagePath(data: ImageData) {
+    if (data.name) {
+        return `/${data.type}/${data.name}/${data.fileName}`;
+    } else {
+        return `/${data.type}/${data.fileName}`;
+    }
 }

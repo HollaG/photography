@@ -1,0 +1,5 @@
+.tabContent {
+    padding: var(--mantine-spacing-lg);
+    max-width: 128rem;
+    margin: auto;
+}

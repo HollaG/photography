@@ -4,7 +4,7 @@ import {
     SearchDispatchContext,
 } from "../../../context/SearchContext";
 import { TAG_NAME_SEPARATOR } from "../../../util/consts";
-import { ImageData } from "../../../util/data";
+import { ImageData, getImagePath } from "../../../util/data";
 import ImageComponent from "../Image/ImageComponent";
 import classes from "./Gallery.module.css";
 
@@ -27,7 +27,7 @@ const Gallery = ({ images, folderName }: GalleryProps) => {
                 {filteredData.map((image, index) => (
                     <div key={index} className={classes.image}>
                         <ImageComponent
-                            src={`/${folderName}/${image.name}/${image.fileName}`}
+                            src={getImagePath(image)}
                             {...image}
                             tagOnClick={(tag) => setSearchQuery(tag)}
                             nameOnClick={(name) => setSearchQuery(name)}
