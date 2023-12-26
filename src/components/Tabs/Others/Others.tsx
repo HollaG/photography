@@ -20,7 +20,7 @@ const Others = () => {
             >
                 {str}
             </Highlight>
-            <Gallery folderName="Others" images={OTHERS_DATA} />
+            <Gallery images={OTHERS_DATA} />
         </div>
     );
 };

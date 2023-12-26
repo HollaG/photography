@@ -990,7 +990,6 @@ export const UNIQUE_LOCATIONS = uniquify(ALL_IMAGES, "location").sort((a, b) =>
 );
 export const UNIQUE_LOCATIONS_COUNT = UNIQUE_LOCATIONS.length;
 
-console.log(UNIQUE_LOCATIONS);
 /**
  * Removes duplicates.
  *
@@ -1040,4 +1039,15 @@ export function getImagePath(data: ImageData) {
     } else {
         return `/${data.type}/${data.fileName}`;
     }
+}
+
+export function convertToAcronym(location: string) {
+    let acronym = "";
+    location.split(" ").forEach((word) => {
+        if (word.at(0) === word.at(0)?.toUpperCase()) {
+            acronym += word.at(0);
+        }
+    });
+
+    return acronym;
 }

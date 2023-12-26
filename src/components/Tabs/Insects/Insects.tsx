@@ -19,7 +19,7 @@ const Insects = () => {
             >
                 {str}
             </Highlight>
-            <Gallery folderName="Insects" images={INSECT_DATA} />
+            <Gallery images={INSECT_DATA} />
         </div>
     );
 };

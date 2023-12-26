@@ -12,7 +12,7 @@ const General = () => {
                 Click on an image to view it full-size!
             </Text>
 
-            <Gallery folderName="Birds" images={GENERAL_DATA} />
+            <Gallery images={GENERAL_DATA} />
         </div>
     );
 };

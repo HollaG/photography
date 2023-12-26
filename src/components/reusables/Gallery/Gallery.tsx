@@ -10,9 +10,8 @@ import classes from "./Gallery.module.css";
 
 type GalleryProps = {
     images: ImageData[];
-    folderName: string;
 };
-const Gallery = ({ images, folderName }: GalleryProps) => {
+const Gallery = ({ images }: GalleryProps) => {
     const searchQuery = useContext(SearchContext);
     const setSearchQuery = useContext(SearchDispatchContext);
 

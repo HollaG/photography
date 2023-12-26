@@ -20,7 +20,7 @@ const Birds = () => {
             >
                 {str}
             </Highlight>
-            <Gallery folderName="Birds" images={BIRD_DATA} />
+            <Gallery images={BIRD_DATA} />
         </div>
     );
 };

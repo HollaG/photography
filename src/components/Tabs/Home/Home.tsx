@@ -9,9 +9,6 @@ import {
     Center,
     Flex,
     Button,
-    Paper,
-    Group,
-    SimpleGrid,
     Box,
     ScrollArea,
     em,
@@ -38,15 +35,15 @@ import ImageComponent from "../../reusables/Image/ImageComponent";
 import { TabDispatchContext } from "../../../context/TabContext";
 import { SearchDispatchContext } from "../../../context/SearchContext";
 import { useMediaQuery } from "@mantine/hooks";
-import { theme } from "../../../theme";
 
 export default function Home() {
     const setActiveTab = useContext(TabDispatchContext);
     const setSearchQuery = useContext(SearchDispatchContext);
     // get a random image lmao
-    let img = getRandomImage();
+    const img = getRandomImage();
 
-    const [_, setC] = useState(true);
+    // refresh state
+    const [, setC] = useState(true);
 
     const belowSm = useMediaQuery(`(max-width:${em(768)})`);
     const infoCardHeight = belowSm ? 75 : 200;
@@ -151,24 +148,6 @@ export default function Home() {
                             is for all my bird-related activity
                         </List.Item>
                     </List>
-
-                    {/* <Group mt={30}>
-                        <Button
-                            radius="xl"
-                            size="md"
-                            className={classes.control}
-                        >
-                            Get started
-                        </Button>
-                        <Button
-                            variant="default"
-                            radius="xl"
-                            size="md"
-                            className={classes.control}
-                        >
-                            Source code
-                        </Button>
-                    </Group> */}
                 </div>
                 <Image
                     src={"self.jpg"}
@@ -195,11 +174,11 @@ export default function Home() {
                 <ImageComponent
                     {...img}
                     src={`/${img.type}/${img.name}/${img.fileName}`}
-                    nameOnClick={(_) => {
+                    nameOnClick={() => {
                         setActiveTab(img.type);
                         setSearchQuery(img.name);
                     }}
-                    tagOnClick={(_) => {
+                    tagOnClick={() => {
                         setActiveTab(img.type);
                         setSearchQuery(img.tag);
                     }}
@@ -212,7 +191,7 @@ export default function Home() {
                         <IconCamera /> {ALL_IMAGES.length + GENERAL_DATA.length}
                     </Text>
                     <Text className={classes.infoTitle}>PHOTOS TAKEN</Text>
-                    <Text className={classes.description}>
+                    <Text className={classes.description} component="span">
                         <ScrollArea h={infoCardHeight}>
                             <Text
                                 className={classes.infoTitleSmall}
@@ -220,6 +199,7 @@ export default function Home() {
                                 tt="uppercase"
                                 fw={700}
                                 mt={6}
+                                component="span"
                             >
                                 Main Camera
                             </Text>
@@ -230,6 +210,7 @@ export default function Home() {
                                 tt="uppercase"
                                 fw={700}
                                 mt={12}
+                                component="span"
                             >
                                 Lenses
                             </Text>
@@ -244,7 +225,7 @@ export default function Home() {
                         <IconFeather /> {ALL_UNIQUE_COUNT}
                     </Text>
                     <Text className={classes.infoTitle}>SPECIES OBSERVED</Text>
-                    <Text className={classes.description}>
+                    <Text className={classes.description} component="span">
                         <ScrollArea h={infoCardHeight}>
                             {UNIQUE_ALL.map((data, key) => (
                                 <div
@@ -267,7 +248,7 @@ export default function Home() {
                         <IconMapPins /> {UNIQUE_LOCATIONS_COUNT}
                     </Text>
                     <Text className={classes.infoTitle}>LOCATIONS VISITED</Text>
-                    <Text className={classes.description}>
+                    <Text className={classes.description} component="span">
                         <ScrollArea h={infoCardHeight}>
                             {UNIQUE_LOCATIONS.map((data, key) => (
                                 <div key={key}> {data.location} </div>
