@@ -1,4 +1,4 @@
-import { Container, Tabs, rem } from "@mantine/core";
+import { Container, ScrollArea, Tabs, rem } from "@mantine/core";
 
 import classes from "./Body.module.css";
 import { PAGE_CONTAINER_SIZE, tabs } from "../../util/consts";
@@ -47,9 +47,11 @@ const Body = () => {
             onChange={(value) => setActiveTab(value)}
         >
             <div className={classes.tabs}>
-                <Container size={PAGE_CONTAINER_SIZE}>
+                {/* <Container size={PAGE_CONTAINER_SIZE}> */}
+                <ScrollArea type="never">
                     <Tabs.List justify="center">{items}</Tabs.List>
-                </Container>
+                </ScrollArea>
+                {/* </Container> */}
             </div>
 
             <div className={classes.tabContent}>

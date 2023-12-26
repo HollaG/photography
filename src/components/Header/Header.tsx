@@ -104,20 +104,6 @@ export function Header() {
                     {AutocompleteComponent}
                 </Box>
             </Container>
-            {/* <Container size="xl">
-                <Tabs
-                    defaultValue="Home"
-                    variant="outline"
-                    visibleFrom="sm"
-                    classNames={{
-                        root: classes.tabs,
-                        list: classes.tabsList,
-                        tab: classes.tab,
-                    }}
-                >
-                    <Tabs.List>{items}</Tabs.List>
-                </Tabs>
-            </Container> */}
         </div>
     );
 }
