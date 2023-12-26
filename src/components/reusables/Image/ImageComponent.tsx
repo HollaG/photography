@@ -1,13 +1,13 @@
 import { Flex, Image, Text } from "@mantine/core";
 
 import classes from "./ImageComponent.module.css";
-import { TAG_NAME_SEPARATOR } from "../../../util/consts";
 
 interface ImageProps {
     src: string;
     name: string;
     tag: string;
     description: string;
+    location?: string;
 
     // If specified, calls the provided function when the `tag` text is clicked.
     tagOnClick?: (tag: string) => void;
@@ -27,6 +27,7 @@ const ImageComponent = ({
     name,
     tag,
     // description,
+    location,
     tagOnClick,
     nameOnClick,
 }: ImageProps) => {
@@ -37,7 +38,7 @@ const ImageComponent = ({
                 className={classes.image}
                 onClick={() => window.open(src.replace(".webp", ".jpg"))}
             />
-            <Flex className={classes.labelContainer} gap={4} fz="xs">
+            <Flex className={classes.labelContainer2} gap={4} fz={"xs"}>
                 <Text
                     onClick={() => (tagOnClick ? tagOnClick(tag) : null)}
                     className={tagOnClick && classes.clickable}
@@ -46,16 +47,38 @@ const ImageComponent = ({
                     {" "}
                     {tag}{" "}
                 </Text>
-                <Text c="dimmed" fz="xs">
-                    {TAG_NAME_SEPARATOR}
-                </Text>
-                <Text
-                    onClick={() => (nameOnClick ? nameOnClick(name) : null)}
-                    className={nameOnClick && classes.clickable}
-                    fz="xs"
-                >
-                    {name}
-                </Text>
+            </Flex>
+            <Flex
+                className={classes.labelContainer}
+                gap={4}
+                fz="xs"
+                direction={"column"}
+            >
+                <Flex gap={4}>
+                    {/* <Text
+                        onClick={() => (tagOnClick ? tagOnClick(tag) : null)}
+                        className={tagOnClick && classes.clickable}
+                        fz="xs"
+                    >
+                        {" "}
+                        {tag}{" "}
+                    </Text>
+                    <Text c="dimmed" fz="xs">
+                        {TAG_NAME_SEPARATOR}
+                    </Text> */}
+                    <Text
+                        onClick={() => (nameOnClick ? nameOnClick(name) : null)}
+                        className={nameOnClick && classes.clickable}
+                        fz="xs"
+                    >
+                        {name}
+                    </Text>
+                </Flex>
+                {location?.length ? (
+                    <Text size="xxs"> {location} </Text>
+                ) : (
+                    <></>
+                )}
             </Flex>
         </div>
     );

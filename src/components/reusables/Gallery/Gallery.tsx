@@ -27,10 +27,8 @@ const Gallery = ({ images, folderName }: GalleryProps) => {
                 {filteredData.map((image, index) => (
                     <div key={index} className={classes.image}>
                         <ImageComponent
-                            description=""
-                            name={image.name}
                             src={`/${folderName}/${image.name}/${image.fileName}`}
-                            tag={image.tag}
+                            {...image}
                             tagOnClick={(tag) => setSearchQuery(tag)}
                             nameOnClick={(name) => setSearchQuery(name)}
                         />

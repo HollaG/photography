@@ -6,13 +6,38 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    bottom: 1rem;
-    right: 1rem;
+    /* bottom: 0.5rem;
+    right: 0.5rem;
     padding-left: var(--mantine-spacing-xs);
     padding-right: var(--mantine-spacing-xs);
     padding-top: var(--mantine-spacing-xxs);
     padding-bottom: var(--mantine-spacing-xxs);
-    border-radius: var(--mantine-spacing-xs);
+    border-radius: var(--mantine-spacing-xxs); */
+
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+    /* For small screens, we integrate it directly into the bottom */
+    @media (max-width: $mantine-breakpoint-sm) {
+        bottom: 0;
+        right: 0;
+        /* padding-left: var(--mantine-spacing-xxs);
+        padding-right: var(--mantine-spacing-xxs);
+        padding-top: var(--mantine-spacing-xxs);
+        padding-bottom: var(--mantine-spacing-xxs); */
+
+        padding: var(--mantine-spacing-xxs);
+        border-radius: 0;
+    }
+}
+
+.labelContainer2 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    color: white;
 }
 
 .image {

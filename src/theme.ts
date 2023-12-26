@@ -5,6 +5,9 @@ export const theme = createTheme({
     spacing: {
         xxs: "0.5rem",
     },
+    fontSizes: {
+        xxs: "0.6rem",
+    },
 });
 
 export const resolver: CSSVariablesResolver = (theme) => ({
