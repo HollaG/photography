@@ -49,7 +49,6 @@ export default function Home() {
     const [_, setC] = useState(true);
 
     const belowSm = useMediaQuery(`(max-width:${em(768)})`);
-    console.log(belowSm);
     const infoCardHeight = belowSm ? 75 : 200;
     return (
         <Container size="md">

@@ -8,6 +8,14 @@ export const theme = createTheme({
     fontSizes: {
         xxs: "0.6rem",
     },
+    // components: {
+    //     Button: {
+    //         defaultProps: {
+    //             borderRadius: "lg",
+    //         },
+    //     },
+    // },
+    // primaryColor: "teal",
 });
 
 export const resolver: CSSVariablesResolver = (theme) => ({

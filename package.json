@@ -13,10 +13,12 @@
         "@mantine/core": "7.3.2",
         "@mantine/hooks": "7.3.2",
         "@tabler/icons-react": "^2.44.0",
+        "mousetrap": "^1.6.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@types/mousetrap": "^1.6.15",
         "@types/react": "^18.2.36",
         "@types/react-dom": "^18.2.14",
         "@typescript-eslint/eslint-plugin": "^6.9.1",

@@ -10,6 +10,8 @@ import {
     Avatar,
     CloseButton,
     Box,
+    Kbd,
+    em,
 } from "@mantine/core";
 
 import classes from "./Header.module.css";
@@ -20,8 +22,10 @@ import {
     SearchDispatchContext,
 } from "../../context/SearchContext";
 import { AUTOCOMPLETE_DATA_GROUPED } from "../../util/data";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import SearchModal from "../SearchModal/SearchModal";
+
+import Mousetrap from "mousetrap";
 
 export function Header() {
     const searchQuery = useContext(SearchContext);
@@ -29,6 +33,16 @@ export function Header() {
 
     const [opened, { open, close }] = useDisclosure(false);
 
+    // track when user does CTRL K
+    Mousetrap.bind(["command+k", "ctrl+k"], (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        open();
+    });
+    const belowSm = useMediaQuery(`(max-width:${em(768)})`);
+
+    const rightSectionWidth = belowSm ? em(28) : em(100);
     const AutocompleteComponent = (
         <Autocomplete
             className={classes.search}
@@ -48,14 +62,20 @@ export function Header() {
             }}
             readOnly
             rightSection={
-                <CloseButton
-                    aria-label="Clear input"
-                    onClick={() => setSearchQuery("")}
-                    style={{
-                        display: searchQuery ? undefined : "none",
-                    }}
-                />
+                <Flex align={"center"} justify={"end"}>
+                    <Kbd size="xs" visibleFrom="sm">
+                        CTRL + K
+                    </Kbd>
+                    <CloseButton
+                        aria-label="Clear input"
+                        onClick={() => setSearchQuery("")}
+                        style={{
+                            display: searchQuery ? undefined : "none",
+                        }}
+                    />{" "}
+                </Flex>
             }
+            rightSectionWidth={rightSectionWidth}
         />
     );
     return (
