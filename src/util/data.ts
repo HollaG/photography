@@ -142,7 +142,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Terns",
         fileName: "IMG_1545.webp",
         description: "",
-        location: "Bedok Reservoir View",
+        location: "Bedok Reservoir Park",
     },
     {
         type: "Birds",
@@ -438,7 +438,7 @@ const BIRD_IMAGES: ImageData[] = [
         tag: "Kingfishers",
         fileName: "R6__9863.webp",
         description: "",
-        location: "Pair Ris Park",
+        location: "Pasir Ris Park",
     },
     {
         type: "Birds",
@@ -931,20 +931,20 @@ export const OTHERS_DATA = OTHERS_IMAGES.sort((a, b) =>
 export const GENERAL_DATA = GENERAL_IMAGES.sort(() => Math.random() - 0.5);
 
 // Group an array of objects by a key, except for General Images
-export const GROUPED_BY_TAG = uniquify(ALL_IMAGES, "name").reduce(
-    (acc, item) => {
-        const { tag } = item;
-
-        if (!acc[tag]) {
-            acc[tag] = [];
-        }
-
-        acc[tag].push(item);
-
-        return acc;
-    },
-    {} as { [key: string]: typeof BIRD_DATA }
+export const UNIQUE_ALL = uniquify(ALL_IMAGES, "name").sort((a, b) =>
+    a.name < b.name ? -1 : 1
 );
+export const GROUPED_BY_TAG = UNIQUE_ALL.reduce((acc, item) => {
+    const { tag } = item;
+
+    if (!acc[tag]) {
+        acc[tag] = [];
+    }
+
+    acc[tag].push(item);
+
+    return acc;
+}, {} as { [key: string]: typeof BIRD_DATA });
 
 // convert into the form needed by Autocomplete
 export const AUTOCOMPLETE_DATA_GROUPED = Object.keys(GROUPED_BY_TAG)
@@ -982,6 +982,15 @@ export const UNIQUE_OTHERS_COUNT = unique(
     OTHERS_IMAGES.map((otherData) => otherData.name)
 ).length;
 
+export const ALL_UNIQUE_COUNT =
+    UNIQUE_BIRDS_COUNT + UNIQUE_INSECTS_COUNT + UNIQUE_OTHERS_COUNT;
+
+export const UNIQUE_LOCATIONS = uniquify(ALL_IMAGES, "location").sort((a, b) =>
+    a.location < b.location ? -1 : 1
+);
+export const UNIQUE_LOCATIONS_COUNT = UNIQUE_LOCATIONS.length;
+
+console.log(UNIQUE_LOCATIONS);
 /**
  * Removes duplicates.
  *

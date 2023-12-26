@@ -9,15 +9,36 @@ import {
     Center,
     Flex,
     Button,
+    Paper,
+    Group,
+    SimpleGrid,
+    Box,
+    ScrollArea,
+    em,
 } from "@mantine/core";
 
 import classes from "./Home.module.css";
-import { getRandomImage } from "../../../util/data";
-import { IconRefresh } from "@tabler/icons-react";
+import {
+    ALL_IMAGES,
+    ALL_UNIQUE_COUNT,
+    GENERAL_DATA,
+    UNIQUE_ALL,
+    UNIQUE_LOCATIONS,
+    UNIQUE_LOCATIONS_COUNT,
+    getRandomImage,
+} from "../../../util/data";
+import {
+    IconCamera,
+    IconFeather,
+    IconMapPins,
+    IconRefresh,
+} from "@tabler/icons-react";
 import { useContext, useState } from "react";
 import ImageComponent from "../../reusables/Image/ImageComponent";
 import { TabDispatchContext } from "../../../context/TabContext";
 import { SearchDispatchContext } from "../../../context/SearchContext";
+import { useMediaQuery } from "@mantine/hooks";
+import { theme } from "../../../theme";
 
 export default function Home() {
     const setActiveTab = useContext(TabDispatchContext);
@@ -26,6 +47,10 @@ export default function Home() {
     let img = getRandomImage();
 
     const [_, setC] = useState(true);
+
+    const belowSm = useMediaQuery(`(max-width:${em(768)})`);
+    console.log(belowSm);
+    const infoCardHeight = belowSm ? 75 : 200;
     return (
         <Container size="md">
             <div className={classes.inner}>
@@ -152,7 +177,7 @@ export default function Home() {
                     visibleFrom="md"
                 />
             </div>
-            <div>
+            <Box mb={30}>
                 <Flex justify={"center"} align={"center"} gap={12} mb={30}>
                     <Title size={"h3"} ta="center">
                         {" "}
@@ -180,6 +205,77 @@ export default function Home() {
                         setSearchQuery(img.tag);
                     }}
                 />
+            </Box>
+
+            <div className={classes.root}>
+                <div className={classes.stat}>
+                    <Text className={classes.count}>
+                        <IconCamera /> {ALL_IMAGES.length + GENERAL_DATA.length}
+                    </Text>
+                    <Text className={classes.infoTitle}>PHOTOS TAKEN</Text>
+                    <Text className={classes.description}>
+                        <ScrollArea h={infoCardHeight}>
+                            <Text
+                                className={classes.infoTitleSmall}
+                                size="xs"
+                                tt="uppercase"
+                                fw={700}
+                                mt={6}
+                            >
+                                Main Camera
+                            </Text>
+                            <div>Canon EOS R6</div>
+                            <Text
+                                className={classes.infoTitleSmall}
+                                size="xs"
+                                tt="uppercase"
+                                fw={700}
+                                mt={12}
+                            >
+                                Lenses
+                            </Text>
+                            <div>Sigma 100-400mm C with 1.4x Teleconverter</div>
+                            <div>Canon 100mm F2.8L Macro</div>
+                            <div>Sigma 24mm F1.4 Art</div>
+                        </ScrollArea>
+                    </Text>
+                </div>
+                <div className={classes.stat}>
+                    <Text className={classes.count}>
+                        <IconFeather /> {ALL_UNIQUE_COUNT}
+                    </Text>
+                    <Text className={classes.infoTitle}>SPECIES OBSERVED</Text>
+                    <Text className={classes.description}>
+                        <ScrollArea h={infoCardHeight}>
+                            {UNIQUE_ALL.map((data, key) => (
+                                <div
+                                    key={key}
+                                    onClick={() => {
+                                        setActiveTab(data.type);
+                                        setSearchQuery(data.name);
+                                    }}
+                                    style={{ cursor: "pointer" }}
+                                >
+                                    {" "}
+                                    {data.name}{" "}
+                                </div>
+                            ))}
+                        </ScrollArea>
+                    </Text>
+                </div>
+                <div className={classes.stat}>
+                    <Text className={classes.count}>
+                        <IconMapPins /> {UNIQUE_LOCATIONS_COUNT}
+                    </Text>
+                    <Text className={classes.infoTitle}>LOCATIONS VISITED</Text>
+                    <Text className={classes.description}>
+                        <ScrollArea h={infoCardHeight}>
+                            {UNIQUE_LOCATIONS.map((data, key) => (
+                                <div key={key}> {data.location} </div>
+                            ))}
+                        </ScrollArea>
+                    </Text>
+                </div>
             </div>
         </Container>
     );
