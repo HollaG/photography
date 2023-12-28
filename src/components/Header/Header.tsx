@@ -26,10 +26,13 @@ import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import SearchModal from "../SearchModal/SearchModal";
 
 import Mousetrap from "mousetrap";
+import { TabContext, TabDispatchContext } from "../../context/TabContext";
 
 export function Header() {
     const searchQuery = useContext(SearchContext);
     const setSearchQuery = useContext(SearchDispatchContext);
+    const setActiveTab = useContext(TabDispatchContext);
+    const activeTab = useContext(TabContext);
 
     const [opened, { open, close }] = useDisclosure(false);
 
@@ -86,8 +89,16 @@ export function Header() {
                 size={PAGE_CONTAINER_SIZE}
             >
                 <Group justify="space-between">
-                    <Flex align={"center"} gap={"sm"}>
-                        <Avatar src="self.jpg" alt="It's me!" size="md" />
+                    <Flex
+                        align={"center"}
+                        gap={"sm"}
+                        onClick={() => setActiveTab("Home")}
+                        style={{
+                            cursor:
+                                activeTab === "Home" ? "default" : "pointer",
+                        }}
+                    >
+                        <Avatar src="self.webp" alt="It's me!" size="md" />
                         <Title size={"h4"}> Marcus Soh </Title>
                     </Flex>
                     <Flex

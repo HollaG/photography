@@ -37,6 +37,7 @@ const ImageComponent = ({
                 src={src}
                 className={classes.image}
                 onClick={() => window.open(src.replace(".webp", ".jpg"))}
+                alt={name}
             />
             {tag && (
                 <Flex className={classes.labelContainer2} gap={4} fz={"xs"}>

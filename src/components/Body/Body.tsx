@@ -51,7 +51,7 @@ const Body = () => {
         >
             <div className={classes.tabs}>
                 {/* <Container size={PAGE_CONTAINER_SIZE}> */}
-                <ScrollArea type="never">
+                <ScrollArea scrollbarSize={4}>
                     <Tabs.List justify="center">{items}</Tabs.List>
                 </ScrollArea>
                 {/* </Container> */}

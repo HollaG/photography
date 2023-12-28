@@ -46,16 +46,19 @@ export default function Home() {
     const [, setC] = useState(true);
 
     const belowSm = useMediaQuery(`(max-width:${em(768)})`);
-    const infoCardHeight = belowSm ? 75 : 200;
+    const infoCardHeight = belowSm ? 150 : 200;
     return (
         <Container size="md">
             <div className={classes.inner}>
                 <div className={classes.content}>
                     <Center>
                         <Image
-                            src={"self.jpg"}
+                            src={"self.webp"}
                             className={classes.image}
                             hiddenFrom="md"
+                            alt="It's me!"
+                            onClick={() => window.open("self.jpg")}
+                            style={{ cursor: "pointer" }}
                         />
                     </Center>
 
@@ -69,9 +72,9 @@ export default function Home() {
                         other genres too sometimes!
                     </Text>
                     <Text c="dimmed" mt="md">
-                        I'm also a software developer! Check out my portfolio{" "}
+                        I'm also a software developer! Check out{" "}
                         <Anchor href="https://marcussoh.com" target="_blank">
-                            here!
+                            my portfolio here
                         </Anchor>
                     </Text>
 
@@ -82,11 +85,12 @@ export default function Home() {
                                 <Avatar
                                     radius={"sm"}
                                     size={48}
-                                    src="icons/instagram.png"
+                                    src="icons/instagram.webp"
                                     className={classes.clickableIcon}
                                     component="a"
                                     href="https://www.instagram.com/colouredmarkers_?igsh=MW85OWNtZDl0enkxNA=="
                                     target="_blank"
+                                    alt="Instagram icon"
                                 />
                             }
                         >
@@ -109,12 +113,13 @@ export default function Home() {
                             icon={
                                 <Avatar
                                     radius={"sm"}
-                                    src="icons/inaturalist.png"
+                                    src="icons/inaturalist.webp"
                                     className={classes.clickableIcon}
                                     size="48"
                                     component="a"
                                     href="https://www.inaturalist.org/people/marcussoh"
                                     target="_blank"
+                                    alt="iNaturalist icon"
                                 />
                             }
                         >
@@ -130,12 +135,13 @@ export default function Home() {
                             icon={
                                 <Avatar
                                     radius={"sm"}
-                                    src="icons/ebird.png"
+                                    src="icons/ebird.webp"
                                     className={classes.clickableIcon}
                                     size="48"
                                     component="a"
                                     href="https://ebird.org/profile/Mjc2NDYzMQ"
                                     target="_blank"
+                                    alt="eBird icon"
                                 />
                             }
                         >
@@ -150,9 +156,12 @@ export default function Home() {
                     </List>
                 </div>
                 <Image
-                    src={"self.jpg"}
+                    src={"self.webp"}
                     className={classes.image}
                     visibleFrom="md"
+                    onClick={() => window.open("self.jpg")}
+                    style={{ cursor: "pointer" }}
+                    alt="It's me!"
                 />
             </div>
             <Box mb={30}>
@@ -166,8 +175,20 @@ export default function Home() {
                         size="sm"
                         variant="light"
                         onClick={() => setC((prev) => !prev)}
+                        visibleFrom="sm"
                     >
                         New image
+                    </Button>
+                    <Button
+                        size="sm"
+                        variant="light"
+                        onClick={() => setC((prev) => !prev)}
+                        hiddenFrom="sm"
+                        style={{
+                            flexShrink: 0,
+                        }}
+                    >
+                        <IconRefresh />
                     </Button>
                 </Flex>
 

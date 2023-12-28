@@ -76,6 +76,7 @@
 
     @media (max-width: $mantine-breakpoint-sm) {
         flex-direction: column;
+        padding: var(--mantine-spacing-xl);
     }
 }
 
